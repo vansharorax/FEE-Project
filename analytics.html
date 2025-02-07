@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Dashboard</title>
+    <link rel="stylesheet" href="analytics.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Analytics Dashboard</h1>
+        </header>
+        <main>
+            <section class="stats">
+                <div class="stat-card">
+                    <h2>Total Views</h2>
+                    <p>12,345</p>
+                </div>
+                <div class="stat-card">
+                    <h2>New Users</h2>
+                    <p>567</p>
+                </div>
+                <div class="stat-card">
+                    <h2>Revenue</h2>
+                    <p>$1,320</p>
+                </div>
+            </section>
+
+            <section class="charts">
+                <div class="chart">
+                    <h3>Monthly Views</h3>
+                    <canvas id="viewsChart"></canvas>
+                </div>
+                <div class="chart">
+                    <h3>Revenue Growth</h3>
+                    <canvas id="revenueChart"></canvas>
+                </div>
+            </section>
+
+            <section class="activity">
+                <h3>Recent Activity</h3>
+                <ul>
+                    <li>Gurkirat commented on a post</li>
+                    <li>5 new users signed up today</li>
+                    <li>Revenue increased by 10% this week</li>
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <p>© 2024 Social Media Dashboard. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const viewsChartCtx = document.getElementById('viewsChart').getContext('2d');
+        const revenueChartCtx = document.getElementById('revenueChart').getContext('2d');
+
+        new Chart(viewsChartCtx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+                datasets: [{
+                    label: 'Views',
+                    data: [3000, 4000, 5000, 6000, 7000],
+                    borderColor: '#3498db',
+                    borderWidth: 2,
+                    fill: false
+                }]
+            }
+        });
+
+        new Chart(revenueChartCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+                datasets: [{
+                    label: 'Revenue ($)',
+                    data: [1200, 1500, 1800, 2000, 2500],
+                    backgroundColor: '#2ecc71'
+                }]
+            }
+        });
+    </script>
+</body>
+</html>

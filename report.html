@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Page</title>
+    <link rel="stylesheet" href="report.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Performance Report</h1>
+            <p>Review your analytics and data insights</p>
+        </header>
+        <main>
+            <!-- Summary Section -->
+            <section class="summary">
+                <div class="card">
+                    <h2>Total Views</h2>
+                    <p>12,345</p>
+                </div>
+                <div class="card">
+                    <h2>New Users</h2>
+                    <p>789</p>
+                </div>
+                <div class="card">
+                    <h2>Revenue</h2>
+                    <p>$1,567</p>
+                </div>
+            </section>
+
+            <!-- Chart Section -->
+            <section class="charts">
+                <h2>Monthly Overview</h2>
+                <canvas id="reportChart"></canvas>
+            </section>
+
+            <!-- Table Section -->
+            <section class="data-table">
+                <h2>Detailed Metrics</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Views</th>
+                            <th>Users</th>
+                            <th>Revenue</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01/11/2024</td>
+                            <td>1,234</td>
+                            <td>56</td>
+                            <td>$123</td>
+                        </tr>
+                        <tr>
+                            <td>02/11/2024</td>
+                            <td>1,567</td>
+                            <td>78</td>
+                            <td>$145</td>
+                        </tr>
+                        <tr>
+                            <td>03/11/2024</td>
+                            <td>1,890</td>
+                            <td>89</td>
+                            <td>$167</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+        <footer>
+            <p>© 2024 Social Media Dashboard. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Chart.js for Graph -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('reportChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May'],
+                datasets: [{
+                    label: 'Views',
+                    data: [1200, 1500, 1800, 2000, 2300],
+                    borderColor: '#16a085',
+                    borderWidth: 2,
+                    fill: false
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

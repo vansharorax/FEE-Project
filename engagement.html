@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engagement Dashboard</title>
+    <link rel="stylesheet" href="engagement.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Engagement Dashboard</h1>
+        </header>
+        <main>
+            <!-- Engagement Stats -->
+            <section class="engagement-stats">
+                <div class="stat-card">
+                    <h2>Likes</h2>
+                    <p>4,567</p>
+                </div>
+                <div class="stat-card">
+                    <h2>Comments</h2>
+                    <p>1,234</p>
+                </div>
+                <div class="stat-card">
+                    <h2>Shares</h2>
+                    <p>789</p>
+                </div>
+                <div class="stat-card">
+                    <h2>Engagement Rate</h2>
+                    <p>45.2%</p>
+                </div>
+            </section>
+
+            <!-- Engagement Chart -->
+            <section class="engagement-chart">
+                <h3>User Engagement Over Time</h3>
+                <div class="chart-container">
+                    <canvas id="engagementChart"></canvas>
+                </div>
+            </section>
+
+            <!-- Recent Interactions -->
+            <section class="recent-interactions">
+                <h3>Recent Interactions</h3>
+                <ul>
+                    <li>Krishna Yadav commented: 💕</li>
+                    <li>Arpita liked your post</li>
+                    <li>Garima shared your post</li>
+                    <li>Aditya Maurya tagged a friend</li>
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <p>© 2024 Social Media Dashboard. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('engagementChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                datasets: [{
+                    label: 'Engagement',
+                    data: [300, 400, 500, 700, 600, 800, 1000],
+                    borderColor: '#e67e22',
+                    backgroundColor: 'rgba(230, 126, 34, 0.2)',
+                    borderWidth: 2,
+                    fill: true,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true, // Keeps the graph proportional
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top'
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

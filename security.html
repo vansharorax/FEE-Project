@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Settings</title>
+    <link rel="stylesheet" href="security.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Security Settings</h1>
+            <p>Manage your account's security and privacy</p>
+        </header>
+        <main>
+            <!-- Password Management -->
+            <section class="security-section">
+                <h2>Password Management</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="current-password">Current Password</label>
+                        <input type="password" id="current-password" placeholder="Enter current password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="new-password">New Password</label>
+                        <input type="password" id="new-password" placeholder="Enter new password" required>
+                    </div>
+                    <button type="submit" class="save-btn">Update Password</button>
+                </form>
+            </section>
+
+            <!-- Security Options -->
+            <section class="security-section">
+                <h2>Security Options</h2>
+                <div class="option-item">
+                    <label for="two-factor-auth">Two-Factor Authentication</label>
+                    <input type="checkbox" id="two-factor-auth">
+                </div>
+                <div class="option-item">
+                    <label for="email-alerts">Email Alerts for Login Attempts</label>
+                    <input type="checkbox" id="email-alerts" checked>
+                </div>
+            </section>
+
+            <!-- Privacy Settings -->
+            <section class="security-section">
+                <h2>Privacy Settings</h2>
+                <div class="option-item">
+                    <label for="show-profile">Show Profile in Search Results</label>
+                    <input type="checkbox" id="show-profile" checked>
+                </div>
+                <div class="option-item">
+                    <label for="data-sharing">Allow Data Sharing with Partners</label>
+                    <input type="checkbox" id="data-sharing">
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>© 2024 Social Media Dashboard. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

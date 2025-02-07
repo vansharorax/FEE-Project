@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages</title>
+    <link rel="stylesheet" href="messages.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar for User List -->
+        <aside class="user-list">
+            <header>
+                <h2>Chats</h2>
+            </header>
+            <ul>
+                <li class="user active">
+                    <span class="user-avatar">GW</span>
+                    <span class="user-info">
+                        <p class="user-name">Gagan Walia</p>
+                        <p class="last-message">Hey! How are you?</p>
+                    </span>
+                </li>
+                <li class="user">
+                    <span class="user-avatar">A</span>
+                    <span class="user-info">
+                        <p class="user-name">Aastha</p>
+                        <p class="last-message">Are we meeting today?</p>
+                    </span>
+                </li>
+                <li class="user">
+                    <span class="user-avatar">GK</span>
+                    <span class="user-info">
+                        <p class="user-name">Garvita Kalra</p>
+                        <p class="last-message">Got the files. Thanks!</p>
+                    </span>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Chat Window -->
+        <main class="chat-window">
+            <header>
+                <h2>Gagan Walia</h2>
+            </header>
+            <div class="chat-messages">
+                <div class="message sent">
+                    <p>Hey Gagan! How are you doing?</p>
+                    <span class="time">10:00 AM</span>
+                </div>
+                <div class="message received">
+                    <p>Hi! I’m good, how about you?</p>
+                    <span class="time">10:02 AM</span>
+                </div>
+                <div class="message sent">
+                    <p>Doing great! Let’s catch up soon.</p>
+                    <span class="time">10:05 AM</span>
+                </div>
+            </div>
+            <form class="message-form">
+                <input type="text" placeholder="Type your message..." required>
+                <button type="submit">Send</button>
+            </form>
+        </main>
+    </div>
+</body>
+</html>
