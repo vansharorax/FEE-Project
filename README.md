@@ -1,0 +1,1 @@
+A modern and fully responsive Social Media Dashboard created using HTML, CSS, and JavaScript. This project provides a clean and user-friendly interface to monitor social media activities from one place. It focuses on simplicity, responsiveness, and a smooth user experience across different devices.
